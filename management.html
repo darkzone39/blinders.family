@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإدارة</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ff0000; /* اللون الأحمر للعناوين */
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-container {
+            margin-bottom: 20px;
+        }
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .profile-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ff0000; /* اللون الأحمر للعناوين */
+        }
+        .profile-name {
+            font-size: 18px;
+            margin-top: 5px;
+            color: #ffffff; /* اللون الأبيض للأسماء الصغيرة */
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="history.back()">رجوع</button>
+        <div class="section-title">الإدارة</div>
+    </div>
+    <div class="content">
+        <div class="profile-container">
+            <div class="profile-title">Owner</div>
+            <img src="https://cdn.discordapp.com/avatars/1174731979388887050/45d13e35731cea369ffdaf2df691ada6.png?size=1024" alt="صورة المؤسس">
+            <div class="profile-name">Ammar Blinders - 34</div>
+        </div>
+        <div class="profile-container">
+            <div class="profile-title">CEO</div>
+            <img src="https://cdn.discordapp.com/avatars/972457167787552768/6016fad5aeb789d602fe735b6e9565c3.png?size=1024" alt="صورة CEO">
+            <div class="profile-name">Ali Blinders - 4</div>
+        </div>
+        <div class="profile-container">
+            <div class="profile-title">Head Family</div>
+            <img src="head_family_image.jpg" alt="صورة Head Family">
+            <div class="profile-name">اسم Head Family</div>
+        </div>
+    </div>
+</body>
+</html>
