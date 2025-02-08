@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأخبار</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .image-container {
+            position: relative;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .text-content {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="history.back()">رجوع</button>
+        <div class="section-title">قسم الأخبار</div>
+    </div>
+    <div class="content">
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://j.top4top.io/p_332053t7l9.jpg" alt="صورة 1">
+            </div>
+            <div class="image-container">
+                <img src="https://h.top4top.io/p_3320m1mfb7.jpg" alt="صورة 2">
+            </div>
+            <div class="image-container">
+                <img src="https://e.top4top.io/p_3320cynbk4.jpg" alt="صورة 3">
+            </div>
+        </div>
+        <div class="text-content">
+            <!-- نص قسم الأخبار هنا -->
+           هنا عائلة بلايندرز سيتم نشر اخر الاخبار عند افتتاح سيرفر للحياة الواقعية والرول بلايhell.
+        </div>
+    </div>
+</body>
+</html>

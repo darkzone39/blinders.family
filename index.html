@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحتي الشخصية</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 0;
+            position: relative;
+        }
+        header img.banner {
+            width: 100%;
+            height: auto;
+        }
+        img.profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .profile-name {
+            position: absolute;
+            bottom: 10px;
+            right: 170px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .discord-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 360px;
+            width: 30px;
+            height: 30px;
+        }
+        .golden-star {
+            position: absolute;
+            bottom: 10px;
+            right: 400px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .centered-text {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffd700;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #1f1f1f;
+            direction: rtl;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1f1f1f;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            direction: rtl;
+        }
+        .dropdown-content a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .image-container {
+            position: relative;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .image-container .text-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+        });
+
+        // عرض النص في الوسط لمدة 5 ثوانٍ عند الضغط على النجمة
+        function showText() {
+            let text = document.querySelector('.centered-text');
+            text.style.display = 'block';
+            setTimeout(function() {
+                text.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://64.media.tumblr.com/8f5cd3b62f643baab1bdb17ecca4a65e/tumblr_pvgijpvRnW1t47arro8_540.gif" alt="بانر" class="banner">
+        <img src="https://b.top4top.io/p_33203ne4v1.png" alt="صورة البروفايل" class="profile">
+        <div class="profile-name">Blinders Family</div>
+        <a href="https://discord.gg/qZwsPH26dY" target="_blank">
+            <img src="https://j.top4top.io/p_3326avqjw0.png" alt="Discord" class="discord-icon">
+        </a>
+        <img src="https://c.top4top.io/p_3326aexjm1.png" alt="نجمة ذهبية" class="golden-star" onclick="showText()">
+        <div class="centered-text">العائلة الأفضل في لعب الأدوار</div>
+    </header>
+    <nav>
+        <a href="#">الصفحة الرئيسية</a>
+        <div class="dropdown">
+            <a href="#">الأقسام</a>
+            <div class="dropdown-content">
+                <a href="garages.html">الكراجات</a>
+                <a href="mansions.html">القصور</a>
+                <a href="companies.html">الشركات</a>
+                <a href="cars.html">السيارات</a>
+                <a href="hotels.html">الفنادق</a>
+                <a href="homes.html">المنازل</a>
+            </div>
+        </div>
+        <a href="news.html">الأخبار</a>
+      <a href="Management.html">الادارة</a>
+        <a href="about_family.html">حول العائلة</a>
+    </nav>
+    <div class="content">
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://wallpapersmug.com/download/1024x768/32a886/san-andreas-game-man-cycle.jpg" alt="صورة 1">
+                <div class="text-overlay">مغامرة</div>
+            </div>
+            <div class="image-container">
+                <img src="https://p4.wallpaperbetter.com/wallpaper/328/147/695/grand-theft-auto-grand-theft-auto-san-andreas-hd-wallpaper-preview.jpg" alt="صورة 2">
+                <div class="text-overlay"> عصابات</div>
+            </div>
+            <div class="image-container">
+                <img src="https://images4.alphacoders.com/596/thumb-1920-596253.jpg" alt="صورة 3">
+                <div class="text-overlay">mta hell</div>
+            </div>
+        </div>
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://picfiles.alphacoders.com/482/482196.jpg" alt="صورة 4">
+                <div class="text-overlay">هروب</div>
+            </div>
+            <div class="image-container">
+                <img src="https://wallpapers.com/images/hd/policewoman-from-gta-san-andreas-byo0yrgqljwhpqep.jpg" alt="صورة 5">
+                <div class="text-overlay">ملاحقة</div>
+            </div>
+            <div class="image-container">
+                <img src="https://images6.alphacoders.com/605/605698.jpg" alt="صورة 6">
+                <div class="text-overlay">اثارة</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

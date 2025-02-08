@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفنادق</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .image-container {
+            margin: 20px 0;
+            position: relative;
+        }
+        .image-container img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .text-content {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور والنصوص
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'a')) {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة النسخ والقص والتحديد.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="history.back()">رجوع</button>
+        <div class="section-title">قسم الفنادق</div>
+    </div>
+    <div class="content">
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://cs4.gtaall.com/screenshots/4dc09/2014-08/original/38b91c47800ee5d94be1ee31c4290419ef4d567f/202482-gallery15.jpg" alt="صورة 1">
+                <div class="text-content">   1</div>
+            </div>
+            <div class="image-container">
+                <img src="https://images.pushsquare.com/da5bed73c8e1d/gta-san-andreas-definitive-edition-all-purchasable-properties-and-hotel-suites-guide-1.large.jpg" alt="صورة 2">
+                <div class="text-content">   2</div>
+            </div>
+            <div class="image-container">
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/11/V-Rock-Hotel-in-GTA-San-Andreas.jpg" alt="صورة 3">
+                <div class="text-content">   3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

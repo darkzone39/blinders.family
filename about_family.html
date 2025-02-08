@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حول العائلة</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .text-content {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="history.back()">رجوع</button>
+        <div class="section-title">حول العائلة</div>
+    </div>
+    <div class="content">
+        <img src="https://64.media.tumblr.com/8f5cd3b62f643baab1bdb17ecca4a65e/tumblr_pvgijpvRnW1t47arro8_540.gif" alt="بانر حول العائلة">
+        <div class="text-content">
+            <!-- نص قسم حول العائلة هنا -->
+           عائلة البيكي بلايندرز (Peaky Blinders) هي عصابة إجرامية نشأت في برمنغهام، إنجلترا خلال أواخر القرن التاسع عشر وأوائل القرن العشرين. اشتهرت العصابة بأسلوبها المميز في اللباس، حيث كان أفرادها يرتدون قبعات مسطحة مزودة بشفرات حادة مخبأة في مقدمتها، والتي كانوا يستخدمونها كأسلحة في القتال.
+
+أصل البيكي بلايندرز
+
+نشأت العصابة من الأحياء الفقيرة في برمنغهام، حيث كانت تضم شبانًا من الطبقة العاملة.
+
+كانت العصابة تنخرط في السرقة، التهريب، الابتزاز، والمراهنات غير القانونية.
+
+اسم "Peaky Blinders" يُعتقد أنه مستوحى من القبعات ذات الحواف الحادة (Peaky)، أو من طريقة استخدامهم للشفرات في القتال، حيث كانوا يضربون أعداءهم في العينين ليتسببوا في العمى المؤقت (Blinders).
+
+
+تأثير العصابة وانهيارها
+
+خلال أوج قوتها، سيطرت العصابة على أجزاء كبيرة من برمنغهام والمناطق المحيطة بها.
+
+مع مرور الوقت، تفككت العصابة بسبب صعود عصابات أخرى أقوى وأكثر تنظيمًا، مثل "عصابة برمنغهام بويز".
+
+بحلول العشرينيات والثلاثينيات، انتهى تأثيرهم تقريبًا، ولكن اسمهم ظل محفورًا في التاريخ الإجرامي لبريطانيا.
+        </div>
+    </div>
+</body>
+</html>

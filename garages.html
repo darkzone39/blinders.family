@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكراجات</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        .back-button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .image-container {
+            position: relative;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        // حماية ضد سرقة الكود وحفظ الصور
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "PrintScreen") {
+                navigator.clipboard.writeText('');
+                alert('تم تعطيل وظيفة تصوير الشاشة.');
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة حفظ الصفحة.');
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('تم تعطيل وظيفة عرض مصدر الصفحة.');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="history.back()">رجوع</button>
+        <div class="section-title">قسم الكراجات</div>
+    </div>
+    <div class="content">
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://cs1.gamemodding.com/posts/2013-03/1363075535_gtasa_cars_1.jpg" alt="صورة 1">
+            </div>
+            <div class="image-container">
+                <img src="https://assets.vg247.com/current//2015/08/GTA-5-real-car-mods.jpg" alt="صورة 2">
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/45/c0/9f/45c09f00ba1e4978fad417f28b6ba274.jpg" alt="صورة 3">
+            </div>
+            </div>
+    <div class="content">
+        <div class="image-row">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/55/9f/56/559f5624b5984e9a322745f07e443d8b.jpg" alt="صورة 1">
+            </div>
+            <div class="image-container">
+                <img src="https://cs2.gtavicecity.ru/screenshots/9a0d4/2014-10/original/1e26ef72961a6c40a2bc4850bfa9ac4e35220df6/223393-gta-sa-2014-10-12-19-11-50-97.jpg" alt="صورة 2">
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/74/be/19/74be194ea412484ee4b1e0ee0592bc96.jpg" alt="صورة 3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
